@@ -26,9 +26,12 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="database.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Release\database.txt">
+    <Text Include="database.txt">
       <Filter>리소스 파일</Filter>
     </Text>
   </ItemGroup>
