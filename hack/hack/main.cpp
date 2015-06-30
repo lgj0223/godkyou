@@ -12,12 +12,28 @@ void main() {
 	cin.ignore(1,'\n'); //cin 과 cin.getline의 \n 사용 방식이 다르므로 넣어줌. cin 으로 남아있는 \n 제거
 
 	if(check == 1) {
-		int column1;
-		char column2[30];
+		char column1[30], column2[30];
+
+		
 
 		cout << "첫번째 값을 입력하세요 : ";
-		cin >> column1;
-		cin.ignore(1,'\n');
+		cin.getline(column1,30);
+
+		/*
+
+		for(int i = 0; i < 30; i++) {
+			if(strcmp(column1[i],"")) {
+				column1[i] = '\0';
+			}
+		}
+
+		*/
+
+		// 비교
+		for(int i = 0; i < 30; i++) {
+			column1[i] = '\0';
+			column2[i] = '\0';
+		}
 
 		cout << endl << "두번째 값을 입력하세요 : ";
 		cin.getline(column2,30);

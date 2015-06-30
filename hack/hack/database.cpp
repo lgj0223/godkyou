@@ -1,9 +1,9 @@
 #include "database.h"
 
-void Database::Insert(int column1, string column2) {
+void Database::Insert(string column1, string column2) {
 	ofstream File;
 	File.open("database.txt",ios::app);
-	File << line++ << '\0' << column1 << '\0' << column2 << endl;
+	File << line++ << column1 << column2 << endl;
 	File.close();
 }
 
@@ -24,10 +24,11 @@ void Database::GetInfo() {
 	fstream File;
 	line = 0;
 	File.open("database.txt",ios::in);
-	int cline;
+	double cline;
+	char readValue[68];
 
-	while(File >> cline >> tableColumn[line].column1 >> tableColumn[line].column2) {
-		cout << tableColumn[line].column1 << endl;
+	while(File >> readValue) {
+		cout << readValue;
 		line++;
 	}
 	File.close();
